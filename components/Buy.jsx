@@ -5,9 +5,10 @@ function Buy() {
     return (
         <section id="buy">
             <h1>Buy</h1>
-            <form>
+            <form className='buy__form'>
                 /* Add the form elements here */
             </form>
+            <button className='buy__button' onClick={() => alert('Purchase simulated')}>Buy a painting</button>
         </section>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Buy.css';
+import '../blocks/Buy.css';
 
 function Buy() {
     const [formData, setFormData] = useState({ name: '', email: '', paintingId: ''});

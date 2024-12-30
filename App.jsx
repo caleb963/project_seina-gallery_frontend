@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import AboutMe from './components/Aboutme';
 import Gallery from './components/Gallery';
 import Buy from './components/Buy';
-import './App.css'
+import './blocks/App.css'
 
 function App() {
     return (

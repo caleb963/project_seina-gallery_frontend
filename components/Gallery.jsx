@@ -1,5 +1,5 @@
 import React from 'react';
-import './Galley.css';
+import '../blocks/Gallery.css';
 
 function Gallery() {
     return (

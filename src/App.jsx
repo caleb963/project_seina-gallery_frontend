@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import AboutMe from '../components/Aboutme';
-import Gallery from '../components/Gallery';
-import Buy from '../components/Buy';
-import './blocks/App.css'
+import Navbar from './components/Navbar';
+import AboutMe from './pages/Aboutme';
+import Gallery from './pages/Gallery';
+import Buy from './pages/Buy';
+import './styles/App.css'
 
 function App() {
     return (

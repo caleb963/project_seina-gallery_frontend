@@ -6,22 +6,26 @@ function Buy() {
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
+        if(window.paypal) {
         window.paypal.Buttons({
             createOrder: (data, actions) => {
                 return actions.order.create({
                         purchase_units: [{
                             amount: {
                                 value: '111.00'
-                            }
-                    }]
+                            },
+                    }],
                 });
             },
             onApprove: (data, actions) => {
-                return actions.order.capture().then(details => {
+                return actions.order.capture().then((details) => {
                     alert('Transaction completed by ' + details.payer.name.given_name);
                 });
-            }
+            },
         }).render('#paypal-button-container');
+    } else {
+        console.error('Paypal SDK not loaded');
+        }
     }, []);
 
 
@@ -49,7 +53,7 @@ function Buy() {
 
     return (
         <section id="buy">
-            <h1>Buy</h1>
+            <h1>Buy a Painting</h1>
             <form className='buy__form' onSubmit={handleSubmit}>
                 <label className='buy__form-label'>
                     Name:

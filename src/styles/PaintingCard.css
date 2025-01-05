@@ -1,0 +1,38 @@
+.painting-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.painting-card:hover {
+    transform: scale(1.05);
+}
+
+.painting-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.painting-card .details {
+    padding: 16px;
+}
+
+.painting-card .title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+.painting-card .artist {
+    font-size: 1em;
+    color: #777;
+}
+
+.painting-card .description {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+}

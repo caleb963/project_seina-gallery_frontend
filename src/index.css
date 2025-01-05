@@ -2,9 +2,9 @@
 
 @import url('../vendor/fonts.css');
 
-@import url('./blocks/App.css');
-@import url('./blocks/Navbar.css');
-@import url('./blocks/Aboutme.css');
-@import url('./blocks/Gallery.css');
-@import url('./blocks/Buy.css');
+@import url('./styles/App.css');
+@import url('./styles/Navbar.css');
+@import url('./styles/Aboutme.css');
+@import url('./styles/Gallery.css');
+@import url('./styles/Buy.css');
 

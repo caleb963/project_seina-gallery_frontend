@@ -8,12 +8,12 @@ export const initializePaypal =  async () => {
         });
 
         if (!paypal) {
-            throw new Error('Paypal SDK no se cargo correctamente.');
+            throw new Error('Paypal SDK dont initialize correctly.');
         }
 
         return paypal;
     } catch (error) {
-        console.error('Error al inicializar Paypal:' , error);
+        console.error('Error Starting Paypal:' , error);
         throw error;
     }
 };

@@ -1,9 +1,10 @@
 import React from 'react';
-import '../blocks/Buy.css';
+import '../styles/Buy.css';
 
 function Buy() {
     const [formData, setFormData] = useState({ name: '', email: '', paintingId: ''});
     const [errors, setErrors] = useState({});
+    const paypalClientId = import.meta.env.VITE_PAYPAL_CLIENT_ID;
 
     useEffect(() => {
         if(window.paypal) {
@@ -22,11 +23,15 @@ function Buy() {
                     alert('Transaction completed by ' + details.payer.name.given_name);
                 });
             },
+            onError: (err) => {
+                console.error('Paypal Error:', err);
+                alert('An error occurred during the transaction. Please try again.');
+            }
         }).render('#paypal-button-container');
     } else {
         console.error('Paypal SDK not loaded');
         }
-    }, []);
+    }, [paypalClientId]);
 
 
     const handleChange = (event) => {
@@ -58,6 +63,7 @@ function Buy() {
                 <label className='buy__form-label'>
                     Name:
                     <input className="buy__form-input" type="text" name="name" value={formData.name} onChange={handleChange} required />
+                    {errors.name && <span className="buy__form-error">{errors.name}</span>}
                 </label>
                 <label className='buy__form-label'>
                     Email:

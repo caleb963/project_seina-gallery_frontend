@@ -2,10 +2,10 @@ import React from 'react';
 
 function Home() {
     return (
-        <div>
-            <h1>Welcome to Seina Art Gallery</h1>
-            <img src='/assets/Seina.png' alt='Seina' />
-        </div>
+        <section className="home">
+            <h1 className="home__title">Welcome to Seina Art Gallery</h1>
+            <img className="home__image" src='/assets/Seina.png' alt='Seina' />
+        </section>
     )
 }
 

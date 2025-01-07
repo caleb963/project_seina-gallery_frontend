@@ -1,8 +1,8 @@
-@import url('../vendor/normalize.css');
+@import url('./vendor/normalize.css');
 
-@import url('../vendor/fonts.css');
+@import url('./vendor/fonts.css');
 
-@import url('./styles/App.css');
+/*@import url('./styles/App.css');*/
 @import url('./styles/Navbar.css');
 @import url('./styles/Aboutme.css');
 @import url('./styles/Gallery.css');

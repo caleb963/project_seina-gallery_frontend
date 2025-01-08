@@ -91,14 +91,21 @@ function Gallery() {
     };
     
     return (
-        <div>
-            <h2>Gallery</h2>
-            <ImageGallery 
-              items={images}
-              onClick={(e) => addToCart(e.target)}
-              showPlayButton={false}
-            />
-        </div>
+        <section className="gallery">
+            <h2 className="gallery__title">Gallery</h2>
+            <div className="gallery__grid">
+                {images.map((image, index) => (
+                    <div key={index} className="gallery__item">
+                        <img src={image.thumbnail} alt={image.description} className="gallery__image"/>
+                        <div className="gallery__info">
+                            <p className="gallery__description">{image.description}</p>
+                            <p className="gallery__price">${image.price}</p>
+                            <button className="gallery__button" onClick={() => addToCart(image)}>Add to Cart</button>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
     );
 }
 

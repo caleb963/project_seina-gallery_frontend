@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -10,15 +10,16 @@ import './styles/App.css';
 
 
 function App() {
+    const [cart, setCart] = useState([]);
     return (
     <PayPalScriptProvider options={{ "client-id": "AZPlhFVjoili6Jzeu704M_gDNmju2Ufs9OeDbAC6ivvtgWmtHIAGbqRReQbsDM3Ujfw_wtiSaz1klUqf" }}>
-        <Router>
+        <Router future={{ v7_startTransition: true}}>
             <Navbar />
             <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/buy" element={<AboutMe />} />
+            <Route path="/about-me" element={<AboutMe />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/about-me" element={<Cart />} />
+            <Route path="/Cart" element={<Cart cart={cart} />} />
             </Routes>
         </Router>
         </PayPalScriptProvider>

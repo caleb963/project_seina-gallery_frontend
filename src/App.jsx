@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import AboutMe from './pages/Aboutme';
+import Aboutme from './pages/Aboutme';
 import Gallery from './pages/Gallery';
 import Cart from './pages/Cart';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
@@ -17,7 +17,7 @@ function App() {
             <Navbar />
             <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/about-me" element={<AboutMe />} />
+            <Route path="/about-me" element={<Aboutme />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/Cart" element={<Cart cart={cart} />} />
             </Routes>

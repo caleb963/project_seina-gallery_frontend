@@ -5,12 +5,13 @@ import Home from './pages/Home';
 import AboutMe from './pages/Aboutme';
 import Gallery from './pages/Gallery';
 import Cart from './pages/Cart';
-import { PaypalScriptProvider } from '@paypal/react-paypal-js';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import './styles/App.css';
 
 
 function App() {
     return (
-    <PaypalScriptProvider options={{ "client-id": "AZPlhFVjoili6Jzeu704M_gDNmju2Ufs9OeDbAC6ivvtgWmtHIAGbqRReQbsDM3Ujfw_wtiSaz1klUqf" }}>
+    <PayPalScriptProvider options={{ "client-id": "AZPlhFVjoili6Jzeu704M_gDNmju2Ufs9OeDbAC6ivvtgWmtHIAGbqRReQbsDM3Ujfw_wtiSaz1klUqf" }}>
         <Router>
             <Navbar />
             <Routes>
@@ -20,7 +21,7 @@ function App() {
             <Route path="/about-me" element={<Cart />} />
             </Routes>
         </Router>
-        </PaypalScriptProvider>
+        </PayPalScriptProvider>
     );
 }
 

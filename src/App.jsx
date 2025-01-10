@@ -13,7 +13,7 @@ function App() {
     const [cart, setCart] = useState([]);
     return (
     <PayPalScriptProvider options={{ "client-id": "AZPlhFVjoili6Jzeu704M_gDNmju2Ufs9OeDbAC6ivvtgWmtHIAGbqRReQbsDM3Ujfw_wtiSaz1klUqf" }}>
-        <BrowserRouter future={{ v7_relativeSplatPath: true}}>
+        <Router future={{ v7_relativeSplatPath: true}}>
             <Navbar />
             <Routes>
             <Route path="/" element={<Home/>} />
@@ -21,7 +21,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/Cart" element={<Cart cart={cart} />} />
             </Routes>
-        </BrowserRouter>
+        </Router>
         </PayPalScriptProvider>
     );
 }

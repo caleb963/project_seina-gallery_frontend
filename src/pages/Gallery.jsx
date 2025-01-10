@@ -1,5 +1,6 @@
 import React, {useState} from 'react';``
 import 'react-image-gallery/styles/css/image-gallery.css';
+import "../styles/Gallery.css";
 
 const images = [
     {
@@ -86,7 +87,7 @@ function Gallery() {
     const [cart, setCart] = useState([]);
 
     const addToCart = (image) => {
-        SetCart([...cart, image]);
+        SetCart((prevCart) => [...prevCart, image]);
     };
     
     return (

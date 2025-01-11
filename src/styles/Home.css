@@ -4,12 +4,14 @@
 }
 
 .home__title {
-    font-size: 2.5 rem;
+    font-size: 1.5 rem;
     margin-bottom: 1.5 rem;
+    color: #FF69B4;
 }
 
 .home__image {
-  width: 50%;
+  width: 25%;
+  height: 25%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

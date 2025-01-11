@@ -1,7 +1,7 @@
 .about-me {
     padding: 2rem;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: black;
+    color: #E6E6FA;
     font-family: 'Arial', sansa-serif;
     line-height: 1.6;
     max-width: 800px;
@@ -14,12 +14,13 @@
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
-    color: #222;
+    color: #E6E6FA;
 }
 
 .about-me__paragraph {
     margin-bottom: 1 rem;
     text-align: justify;
+    color:#E6E6FA;
 }
 
 .about-me__paragraph-highlightened {

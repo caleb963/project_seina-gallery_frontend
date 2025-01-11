@@ -6,13 +6,13 @@ const images = [
     {
         original : '/assets/colorful_darkness.png',
         thumbnail: '/assets/colorful_darkness.png',
-        description: 'Colorful Darkness',
+        description: ' Colorful Darkness',
         price: 65,
     },
     {
         original: '/assets/dmitrp.png',
         thumbnail: '/assets/dmitrp.png',
-        description: 'dmtrip',
+        description: 'DMTrip',
         price: 400,
     },
     {
@@ -48,7 +48,7 @@ const images = [
     {
         original: '/assets/mirror.png',
         thumbnail: '/assets/mirror.png',
-        description: 'mirror',
+        description: 'Mirror',
         price: 200,
     },
     {
@@ -60,7 +60,7 @@ const images = [
     {
         original: '/assets/unacknoledged.png',
         thumbnail: '/assets/unacknoledged.png',
-        description: 'Unacknoledged', 
+        description: 'Unacknowledged', 
         price: 190,  
     },
     {
@@ -78,13 +78,24 @@ const images = [
     {
         original: '/assets/zeldacell.png',
         thumbnail: '/assets/zeldacell.png',
-        description: 'Zeldacell',
+        description: 'ZeldaCell',
         price: 140,
     }
 ]
 
 function Gallery() {
+    const [selectedImage, setSelectedImage] = useState(null);
     const [cart, setCart] = useState([]);
+    
+    const openModal =(image) => {
+        setSelectedImage(image);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+    };
+     
+   
 
     const addToCart = (image) => {
         setCart((prevCart) => [...prevCart, image]);
@@ -105,6 +116,18 @@ function Gallery() {
                     </div>
                 ))}
             </div>
+            {selectedImage && (
+            <div className="gallery__modal">
+                <div className="gallery__modal-content">
+                    <img src={selectedImage.original} alt="gallery__modal-image"/>
+                    <p  className="gallery__modal-price">${selectedImage.description}</p>
+                    <p className="gallery__modal-price">${selectedImage.price}</p>
+                    <button className="gallery__modal-close" onClick={closeModal}>
+                        Close
+                    </button>
+                </div>
+            </div>
+            )}
         </section>
     );
 }

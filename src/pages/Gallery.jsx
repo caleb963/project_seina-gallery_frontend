@@ -6,79 +6,79 @@ const images = [
     {
         original : '/assets/colorful_darkness.png',
         thumbnail: '/assets/colorful_darkness_thumb.png',
-        description: 'Colorful Darkness - $65',
+        description: 'Colorful Darkness',
         price: 65,
     },
     {
-        original: '/assets/Dimitrip.png',
-        thumbnail: '/assets/Dimitrip_thumb.png',
-        description: 'Dimitrip - $125',
-        price: 125,
+        original: '/assets/dmitrp.png',
+        thumbnail: '/assets/dmitrp.png',
+        description: 'dmtrip',
+        price: 400,
     },
     {
         original: '/assetsfuel_spectrum.png',
         thumnail: '/assets/fuel_spectrum_thumbnail.png',
-        description: 'Fuel Spectrum - $75',
+        description: 'Fuel Spectrum',
         price: 75,
     },
     {
         original: '/assets/hikuriwari.png',
         thumbnail: '/assets/hikuriwari_thumb.png',
-        description: 'Hikuriwari - $150',
-        price: 150,
+        description: 'Hikuriwari',
+        price: 250,
     },
     {
         original: '/assets/horusis.png',
         thumbnail: '/assets/horusis_thumb.png',
-        description: 'Horusis - $100',
+        description: 'Horusis',
         price: 100,
     },
     {
         original: '/assets/linear_space.png',
         thumbnail: '/assets/linear_space_thumb.png',
-        description: 'Linear Space - $175',
-        price: 175,
+        description: 'Linear Space',
+        price: 170,
     },
     {
         original: '/assets/purple_shiness.png',
         thumbnail: '/assets/purple_shiness_thumb.png',
-        description: 'Purple Shiness - $80',
-        price: 80,
+        description: 'Purple Shiness',
+        price: 80,  
     },
     {
-        original: '/assets/sweet_home.png',
-        thumbnail: '/assets/sweet_home_thumb.png',
-        description: 'Sweet Home - $200',
+        original: '/assets/mirror.png',
+        thumbnail: '/assets/mirror_thumb.png',
+        description: 'mirror',
         price: 200,
     },
     {
         original: '/assets/through_window.png',
         thumbnail: '/assets/through_window_thumb.png',
-        description: 'Through Window - $130',
+        description: 'Through Window',
         price: 130,
     },
     {
-        original: '/assets/unacknoledged_legion.png',
-        thumbnail: '/assets/unacknoledged_legion_thumb.png',
-        description: 'Unacknoledged Legion - $190', 
+        original: '/assets/unacknoledged.png',
+        thumbnail: '/assets/unacknoledged_thumb.png',
+        description: 'Unacknoledged', 
         price: 190,  
     },
     {
         original: '/assets/waterfall.png',
         thumbnail: '/assets/waterfall_thumb.png',
-        description: 'Waterfall - $90', 
+        description: 'Waterfall', 
         price: 90,
     },
     {
-        original: '/assets/xangalicious.png',
-        thumbnail: '/assets/xangalicious_thumb.png',
-        description: 'Xangalicious - $210',
+        original: '/assets/pink_lights.png',
+        thumbnail: '/assets/pink_lights_thumb.png',
+        description: 'Pink Lights',
         price: 210,
     },
     {
         original: '/assets/zeldacell.png',
         thumbnail: '/assets/zeldacell_thumb.png',
-        description: 'Zeldacell - $140',
+        description: 'Zeldacell',
         price: 140,
     }
 ]
@@ -87,7 +87,7 @@ function Gallery() {
     const [cart, setCart] = useState([]);
 
     const addToCart = (image) => {
-        SetCart((prevCart) => [...prevCart, image]);
+        setCart((prevCart) => [...prevCart, image]);
     };
     
     return (

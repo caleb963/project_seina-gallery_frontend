@@ -87,7 +87,7 @@ function Gallery() {
     const [selectedImage, setSelectedImage] = useState(null);
     const [cart, setCart] = useState([]);
     
-    const openModal =(image) => {
+    const openModal = (image) => {
         setSelectedImage(image);
     };
 
@@ -107,7 +107,7 @@ function Gallery() {
             <div className="gallery__grid">
                 {images.map((image, index) => (
                     <div key={index} className="gallery__item">
-                        <img src={image.thumbnail} alt={image.description} className="gallery__image"/>
+                        <img src={image.thumbnail} alt={image.description} className="gallery__image" onClick={() => openModal(image)} />
                         <div className="gallery__info">
                             <p className="gallery__description">{image.description}</p>
                             <p className="gallery__price">${image.price}</p>

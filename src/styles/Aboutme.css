@@ -11,10 +11,17 @@
 }
 
 .about-me__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
-    color: #E6E6FA;
+    color: yellow;
+}
+
+.about-me__subtitle {
+    font-size: 1.5rem;
+    color: #7FFF00;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .about-me__paragraph {

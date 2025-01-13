@@ -27,10 +27,9 @@
 
 .gallery__image {
     width: 100%;
-    display: block;
     object-fit: cover;
     height: 200px;
-    border-bottom: 1px solid black;
+    cursor: pointer;
 }
 
 .gallery__info {
@@ -42,7 +41,7 @@
 }
 
 .gallery__description {
-    font-size: 1.2 rem;
+    font-size: 1.2rem;
     margin-bottom: 0.3rem;
     color:#FF69B4;
     align-items:center;
@@ -75,9 +74,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 70%;
-    height: 70%;
-    background: rgba(0, 0, 0, 0);
+    width:  100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,51 +85,49 @@
 }
 
 .gallery__modal-content {
-    background: #000000;
-    padding:  1rem;
+    background-color: white;
     border-radius: 10px;
-    text-align: center;
-    max-width: 70%;
-    max-height: 70%;
+    width: 80%;
+    height: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
     box-shadow: 0 4px 10px rgba (0, 0, 0, 0.25);
-    text-align:center;
-    overflow: auto;
+    overflow: hidden;
+    position:relative;
 }
 
-.gallery__modal-image {
+.gallery__modal-content .gallery__modal-image {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 70vh;
     object-fit: contain;
     border-radius: 5px;
-    margin-bottom: 1 rem;
+    margin-bottom: 1rem;
 }
 
-.gallery__modal-description {
+.gallery__modal-description .gallery__modal-price{
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: #333;
 }
 
-.gallery__modal-price {
-    font-size: 1.2rem;
-    color: #7CFC00;
-    margin-bottom: 0.5rem;
-}
 
 .gallery__modal-close {
-    background-color: #0070ba;
-    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
     border: none;
-    padding: 0.5 rem 1rem;
     cursor: pointer;
-    font-size: 1 rem;
-    border-radius: 5px;
+}
+
+.gallery__modal-close-image{
+    width: 20px;
+    height: 20px;   
+    border:none;
 }
 
 .gallery__modal-close:hover {
-    background-color: #005b9a;
+    background-color: hotpink;
 }

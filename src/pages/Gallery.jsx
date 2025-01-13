@@ -117,13 +117,14 @@ function Gallery() {
                 ))}
             </div>
             {selectedImage && (
-            <div className="gallery__modal">
-                <div className="gallery__modal-content">
+            <div className="gallery__modal"
+            onClick={closeModal}
+            >
+                <div className="gallery__modal-content" onClick={(e) => e.stopPropagation()}>
                     <img src={selectedImage.original} alt="gallery__modal-image"/>
                     <p  className="gallery__modal-price">${selectedImage.description}</p>
                     <p className="gallery__modal-price">${selectedImage.price}</p>
-                    <button className="gallery__modal-close" onClick={closeModal}>
-                        Close
+                    <button className="gallery__modal-close" onClick={closeModal}><img src="/assets/close__button.png" className="gallery__modal-close-image"/>
                     </button>
                 </div>
             </div>

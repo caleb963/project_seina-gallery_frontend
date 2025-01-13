@@ -83,9 +83,8 @@ const images = [
     }
 ]
 
-function Gallery() {
+function Gallery({ cart, setCart }) {
     const [selectedImage, setSelectedImage] = useState(null);
-    const [cart, setCart] = useState([]);
     
     const openModal = (image) => {
         setSelectedImage(image);
@@ -98,7 +97,11 @@ function Gallery() {
    
 
     const addToCart = (image) => {
-        setCart((prevCart) => [...prevCart, image]);
+        if (!cart.some(item => item.description === image.description)) {
+            setCart((prevCart) => [...prevCart, image]);
+        } else {
+            alert(`${image.description} is already in the cart!.`);
+        }
     };
     
     return (

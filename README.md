@@ -25,6 +25,7 @@ npm run dev
 Open your browser and navigate to `http://localhost:5317` to view the application.
 
 ## Features
+-Home
 - Display a gallery of artworks
 - an about me about the artist 
 - Paypal buy system
@@ -32,6 +33,7 @@ Open your browser and navigate to `http://localhost:5317` to view the applicatio
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 for every doubt write me jcaleb1110@gmail.com
+
 
 ## License
 This project is licensed under the MIT License.

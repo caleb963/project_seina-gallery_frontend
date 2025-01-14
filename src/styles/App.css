@@ -1,11 +1,23 @@
+
 body {
+    font-size: 16px;
     margin: 0;
     padding: 0;
     font-family: Inter;
     background-color: black;
+    box-sizing: border-box;
   }
   
-  h1, h2, h3 {
-    color: #333;
+  @media (max-width: 600px) {
+    body {
+      font-size: 8px;
+      padding: 1rem;
+    }
   }
-  
+
+  @media (min-width: var(--mobile)) and (max-width: var(--tablet)) {
+    body {
+      font-size: 15px;
+      padding: 1.5rem;
+    }
+  }

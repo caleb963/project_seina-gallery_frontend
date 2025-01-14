@@ -131,3 +131,23 @@
 .gallery__modal-close:hover {
     background-color: hotpink;
 }
+
+@media (max-width: 600px) {
+    .gallery__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery__title {
+        font-size: 1.5rem;
+    }
+
+    .gallery__button {
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+ .gallery__grid{
+    grid-template-columns: repeat(2, 1fr);
+ }
+}

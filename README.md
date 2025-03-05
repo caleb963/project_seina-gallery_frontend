@@ -1,6 +1,10 @@
 # 🎨 Seina Gallery  
 
-Seina Gallery is a **digital art gallery** designed to showcase and sell unique artworks by the artist **Bianca Maldonado**. This platform provides an immersive and interactive experience, allowing users to explore and purchase digital and physical art pieces securely.  
+As part of my web development training, I designed and developed an online art gallery for an independent artist, focusing on user experience, frontend efficiency, and integration with payment systems for purchasing artwork.
+
+My primary focus was usability and accessibility, ensuring that any visitor could navigate and explore the artwork seamlessly. The user interface is optimized to provide an immersive experience, highlighting the artistic work and facilitating the conversion of visitors into buyers.
+
+To enable online transactions, I integrated a payment API that allows users to purchase artwork easily and securely. This not only optimizes sales conversion but also builds customer trust by offering secure and well-recognized payment methods.
 
 ## 🚀 Key Features  
 - **Modern & Responsive UI:** Built with **React.js**, ensuring a seamless user experience across all devices.  
